@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Header from './components/Header';
 import FeedbackList from './components/FeedbackList';
 import FeedbackData from './data/FeedbackData';
-import feedbackStats from './components/feedbackStats';
+import FeedbackStats from './components/FeedbackStats';
 
 function App() {
   const [feedback, setFeedback] = useState(FeedbackData); //single source of truth. Anything connected to it, will also be changed
@@ -16,7 +16,7 @@ function App() {
     <>
       <Header />
       <div className="container">
-        <feedbackStats feedback={feedback} />
+        <FeedbackStats feedback={feedback} />
         <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
       </div>
     </>
